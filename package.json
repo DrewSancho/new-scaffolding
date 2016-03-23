@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cp node_modules/normalize.css/normalize.css src/scss/components/_normalize.scss",
-    "watch:js": "watchify src/js/main.js -o build/bundle.js",
-    "watch:css": "sass --watch src/scss:build",
-    "build:js": "browserify src/js/main.js -o build/bundle.js",
-    "build:css": "sass src/scss/main.scss build/main.css",
+    "watch:js": "watchify src/js/main.js -o public/assets/bundle.js",
+    "watch:css": "sass --watch src/scss:public/assets",
+    "build:js": "browserify src/js/main.js -o public/assets/bundle.js",
+    "build:css": "sass src/scss/main.scss public/assets/main.css",
     "build": "npm run build:js && npm run build:css",
     "watch": "npm run watch:js & npm run watch:css"
   },
@@ -18,6 +18,7 @@
   "devDependencies": {
     "backbone": "^1.3.2",
     "browserify": "^13.0.0",
+    "jquery": "^2.2.2",
     "normalize.css": "^3.0.3",
     "watchify": "^3.7.0"
   }
